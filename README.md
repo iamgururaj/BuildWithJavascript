@@ -2,12 +2,12 @@
 `A sample project to learn various Javascript build, test and CI tools`
 
 ![license mit] (https://img.shields.io/npm/l/express.svg?maxAge=2592000)
-[![travis build] (https://travis-ci.org/iamgururaj/startwars-popular-names.svg?branch=master)](https://travis-ci.org/iamgururaj/BuildWithJavascript)
+[![travis build] (https://travis-ci.org/iamgururaj/BuildWithJavascript.svg?branch=master)](https://travis-ci.org/iamgururaj/BuildWithJavascript)
 
 ### Tools:
 | Tools Used | Description |
 | --- | --- |
-| [Travis](https://travis-ci.org/iamgururaj/startwars-popular-names) | CI |
+| [Travis](https://travis-ci.org/iamgururaj/BuildWithJavascript) | CI |
 | [Commitizen](http://commitizen.github.io/cz-cli/)  | Commit helper |
 | [CZ Conventional](https://github.com/commitizen/cz-conventional-changelog)  | conventional changelog standard |
 | [Semantic Release](https://github.com/semantic-release/semantic-release) | Automated Package Publishing|

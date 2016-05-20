@@ -1,12 +1,12 @@
 import uniqueRandomArray from 'unique-random-array';
-import names from './startwars-names.json';
+import starwarsNames from './startwars-names.json';
 
-var getRandomItem = uniqueRandomArray(names);
+var getRandomItem = uniqueRandomArray(starwarsNames);
 
 module.exports = {
-    all:names,
+    all:starwarsNames,
     random:random,
-    size: names.length
+    size: starwarsNames.length
 };
 
 function random(num) {
