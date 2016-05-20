@@ -1,6 +1,6 @@
 {
   "name": "BuildWithJavascript",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "\"# Javascript modern build, test and CI tools \"",
   "main": "dist/index.js",
   "files": [
