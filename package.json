@@ -1,0 +1,71 @@
+{
+  "name": "BuildWithJavascript",
+  "version": "1.0.0",
+  "description": "\"# Javascript modern build, test and CI tools \"",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "commit": "git-cz",
+    "watch:test": "npm t -- -w",
+    "test": "mocha src/index.test.js --compilers js:babel-register",
+    "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "cover": "nyc npm t",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "prebuild": "rimraf dist",
+    "build": "npm-run-all --parallel build:*",
+    "build:main": "babel --copy-files --out-dir dist --ignore *.test.js src",
+    "build:umd": "webpack --output-filename index.umd.js",
+    "build:umd:min": "webpack --output-filename index.umd.min.js -P",
+    "semantic-release": "semantic-release pre && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamgururaj/BuildWithJavascript.git"
+  },
+  "author": "Gururaj <gururaj.ceg@gmail.com> (https://iamgururaj.wordpress.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamgururaj/BuildWithJavascript/issues"
+  },
+  "homepage": "https://github.com/iamgururaj/BuildWithJavascript#readme",
+  "dependencies": {
+    "mongodb": "^2.1.19",
+    "mongoose": "^4.4.17",
+    "unique-random-array": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "chai": "^3.5.0",
+    "codecov.io": "^0.1.6",
+    "commitizen": "^2.8.1",
+    "cz-conventional-changelog": "^1.1.6",
+    "ghooks": "^1.2.1",
+    "json-loader": "^0.5.4",
+    "mocha": "^2.4.5",
+    "npm-run-all": "^2.1.1",
+    "nyc": "^6.4.4",
+    "rimraf": "^2.5.2",
+    "semantic-release": "^4.3.5",
+    "webpack": "^1.13.0"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run cover"
+    }
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
+  }
+}

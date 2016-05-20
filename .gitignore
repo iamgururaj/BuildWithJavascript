@@ -24,10 +24,22 @@ coverage
 build/Release
 
 # Dependency directory
-node_modules
+node_modules/
 
 # Optional npm cache directory
 .npm
 
 # Optional REPL history
 .node_repl_history
+
+#Intellij directory
+.idea/
+
+#Distribution directory
+dist/
+
+#Code coverage meta directory
+.nyc_output
+
+#npm debug log
+npm-debug.log
